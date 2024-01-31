@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fasterxml.jackson.annotation.JsonCreator.Mode;
+
 @Controller
 public class DefaultController {
 
@@ -40,6 +42,12 @@ public class DefaultController {
         modelAndView.addObject("output1", 1);
      
 
+        return modelAndView;
+    }
+
+    public ModelAndView registerPage()
+    {
+        ModelAndView modelAndView = new ModelAndView("registration");
         return modelAndView;
     }
 
