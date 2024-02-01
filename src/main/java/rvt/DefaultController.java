@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.HashMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -13,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 @Controller
 public class DefaultController {
 
-    @GetMapping(value = "/")
+    /*@GetMapping(value = "/")
     ModelAndView index() {
         ArrayList<Student> students = new CsvManager(CsvManager.STUDENT_CSV).getAllStudents();
 
@@ -22,6 +24,7 @@ public class DefaultController {
         modelAndView.addObject("date", new Date().toString());
         return modelAndView;
     }
+    */
 
     @GetMapping(value = "/about")
     ModelAndView about(@RequestParam HashMap<String, String> queryStringParams) {
@@ -45,10 +48,13 @@ public class DefaultController {
         return modelAndView;
     }
 
+    @RequestMapping(value = "/register")
     public ModelAndView registerPage()
     {
-        ModelAndView modelAndView = new ModelAndView("registration");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("registration");
         return modelAndView;
+
     }
 
 }

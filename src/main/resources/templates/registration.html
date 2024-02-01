@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Registration form</title>
 </head>
 <body>
@@ -15,6 +16,12 @@
         <label for="surname">Surname:</label><br>
         <input type="text" id="surname" placeholder="Ievadi savu uzvārdu"><br>
 
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" placeholder="Ievadi savu vecumu"><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="text" id="birthday" placeholder="Ievadi savu dzimšanas datumu"><br>
+
         <label for="group">Group</label>
         <select name="" id="group">
             <option value="DP2-1">DP2-1</option>
@@ -23,8 +30,15 @@
             <option value="DP2-4">DP2-4</option>
         </select><br>
 
+        <label for="gender">Gender</label><br>
+        <input type="radio" name="Gender" id="R1" value="Vīrietis">
+        <label for="R1">Vīrietis</label><br>
+        <input type="radio" name="Gender" id="R2" value="Sieviete">
+        <label for="R2">Sieviete</label><br>
+
         <label for="email">Email</label><br>
         <input type="email" id="email"><br>
+        <br>
 
         <input type="submit" value="Reģistrēties">
 

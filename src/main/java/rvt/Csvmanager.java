@@ -1,4 +1,4 @@
-package rvt;
+/*package rvt;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -27,7 +27,7 @@ public class CsvManager {
 
             try (CSVReader reader = new CSVReader(new FileReader(this.resource.getFile()))) {
                 String[] nextLine;
-                reader.readNext(); // Skip the header line
+                reader.readNext();
             while ((nextLine = reader.readNext()) != null) {
                 Student student = new Student(nextLine[0], nextLine[1], nextLine[2], nextLine[3]);
                 studentList.add(student);
@@ -51,3 +51,4 @@ public class CsvManager {
         }
     }
 }
+*/
