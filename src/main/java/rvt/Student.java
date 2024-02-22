@@ -14,7 +14,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Student {
+public class Student 
+{
 
     @NotEmpty(message = "Vārds nevar būt tukšs")
     @Pattern(regexp = "^[a-zA-Z]+$", message = "Only letters are allowed")

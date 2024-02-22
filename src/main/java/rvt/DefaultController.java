@@ -39,7 +39,7 @@ public class DefaultController {
 
     @GetMapping(value = "/register")
     public ModelAndView showRegistrationForm() {
-        ModelAndView modelAndView = new ModelAndView("registration/registration-page");
+        ModelAndView modelAndView = new ModelAndView("registration-page");
         List<String> groups = new ArrayList<>(List.of("DP2-1", "DP2-2", "DP2-3", "DP2-4"));
 
         Student student = new Student();
@@ -49,12 +49,19 @@ public class DefaultController {
         return modelAndView;
     }
 
+    @GetMapping(value = "/registration-success")
+    public ModelAndView registerSuccess() {
+        ModelAndView modelAndView = new ModelAndView("registration-success");
+        modelAndView.addObject("output1", 1);
+        return modelAndView;
+    }
+
     @PostMapping(value = "/register")
     public String registration(@ModelAttribute("student") Student student, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "registration/registration-page";
+            return "registration-page";
         }
-        return "redirect:/register?success";
+        return "redirect:/registration-success";
     }
 
 }

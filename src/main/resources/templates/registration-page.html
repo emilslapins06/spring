@@ -5,43 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Registration form</title>
+    <style>
+        body
+        {
+            background-color: lightblue;
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+        </style>
 </head>
+<div class="content">
 <body>
     <h2>Registration form</h2>
 
     <form th:action="@{/register}" method="post" th:object="${student}">
         <label for="name">Name:</label><br>
         <input type="text" id="name" placeholder="Ievadi savu vārdu"><br>
-
+        <br>
         <label for="surname">Surname:</label><br>
         <input type="text" id="surname" placeholder="Ievadi savu uzvārdu"><br>
-
+        <br>
         <label for="age">Age:</label><br>
         <input type="text" id="age" placeholder="Ievadi savu vecumu"><br>
-
+        <br>
         <label for="birthday">Birthday:</label><br>
         <input type="text" id="birthday" placeholder="Ievadi savu dzimšanas datumu"><br>
-
-        <label for="group">Group</label>
+        <br>
+        <label for="group">Group</label><br>
         <select name="" id="group">
             <option value="DP2-1">DP2-1</option>
             <option value="DP2-2">DP2-2</option>
             <option value="DP2-3">DP2-3</option>
             <option value="DP2-4">DP2-4</option>
         </select><br>
-
+        <br>
         <label for="gender">Gender</label><br>
         <input type="radio" name="Gender" id="R1" value="Vīrietis">
         <label for="R1">Vīrietis</label><br>
         <input type="radio" name="Gender" id="R2" value="Sieviete">
         <label for="R2">Sieviete</label><br>
-
+        <br>
         <label for="email">Email</label><br>
         <input type="email" id="email"><br>
         <br>
-
+        <br>
         <input type="submit" value="Reģistrēties">
 
     </form>
+</div>
 </body>
 </html>
