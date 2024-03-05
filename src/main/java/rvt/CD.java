@@ -1,6 +1,6 @@
 package rvt;
 
-public class CD //implements Packable 
+public class CD implements Packable 
 {
     private String artist;
     private String name;
@@ -13,11 +13,10 @@ public class CD //implements Packable
         this.year = year;
     }
 
-    /*@Override
     public double weight() {
         // kg
         return 0.1;
-    }*/
+    }
 
     public String toString() 
     {

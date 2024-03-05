@@ -42,7 +42,8 @@ public class Student
     private String group;
 
    
-    public String toString() {
+    public String toString() 
+    {
         return String.format(
                 "{%s, %s, %s, %s, %s, %s, %s, %s, %s, %s}",
                 this.name,
